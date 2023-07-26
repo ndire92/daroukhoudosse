@@ -1,0 +1,192 @@
+<script>
+  'use strict';
+  $(document).ready(function() {
+
+    var options = {
+      series: [{{dt}}, {{datg}}],
+      chart: {
+        height: 350,
+        width: '100%',
+      type: 'donut',
+    },
+    plotOptions: {
+      pie: {
+        startAngle: -90,
+        endAngle: 270
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    fill: {
+      type: 'gradient',
+    },
+    legend: {
+      formatter: function(val, opts) {
+        return val + " - " + opts.w.globals.series[opts.seriesIndex]
+      }
+    },
+
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          height: 350,
+          width: '100%',
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }]
+    };
+
+    var chart = new ApexCharts(document.querySelector("#course"), options);
+    chart.render();
+
+
+
+      var options = {
+          series: [{{dt}}, {{datg}}],
+          chart: {
+            height: 350,
+            width: '100%',
+          type: 'pie',
+        },
+        labels:[{{dt}}, {{datg}}],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              height: 350,
+              width: '100%',
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#all_details"), options);
+        chart.render();
+
+
+
+
+
+      if ($('#stud_gender').length > 0) {
+          var optionsBar = {
+              chart: {
+                  type: 'bar',
+                  height: 350,
+                  width: '100%',
+                  stacked: true,
+                  toolbar: {
+                      show: false
+                  },
+              },
+              dataLabels: {
+                  enabled: false
+              },
+              plotOptions: {
+                  bar: {
+                      columnWidth: '45%',
+                  }
+              },
+              series: [
+              {
+                  name: "Foncier",
+                  color: '#fdbb38',
+                  data: [{{dt}}],
+              },
+
+
+              {
+                  name: "Gouvernance",
+                  color: '#18affb',
+                  data: [{{datg}}],
+              },
+            
+
+              ],
+              labels: [2023],
+              xaxis: {
+                  labels: {
+                      show: false
+                  },
+                  axisBorder: {
+                      show: false
+                  },
+                  axisTicks: {
+                      show: false
+                  },
+              },
+              yaxis: {
+                  axisBorder: {
+                      show: false
+                  },
+                  axisTicks: {
+                      show: false
+                  },
+                  labels: {
+                      style: {
+                          colors: '#777'
+                      }
+                  }
+              },
+              title: {
+                  text: '',
+                  align: 'left',
+                  style: {
+                      fontSize: '18px'
+                  }
+              }
+
+          }
+
+          var chartBar = new ApexCharts(document.querySelector('#stud_gender'), optionsBar);
+          chartBar.render();
+          }
+		  
+		  
+		  
+			if ($('#apexcharts-area').length > 0) {
+	var options = {
+		chart: {
+			height: 350,
+			type: "area",
+			toolbar: {
+				show: false
+			},
+		},
+		dataLabels: {
+			enabled: false
+		},
+		stroke: {
+			curve: "smooth"
+		},
+		series: [{
+			name: "Foncier",
+			data: [{{dt}}]
+		}, {
+			name: "Gouvernance",
+			color: '#FFBC53',
+			data: [{{datg}}]
+		}],
+		xaxis: {
+			categories: [],
+		}
+	}
+	
+	var chart = new ApexCharts(
+		document.querySelector("#apexcharts-area"),
+		options
+	);
+	chart.render();
+	}
+		  
+
+  });
+
+</script>

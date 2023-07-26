@@ -1,0 +1,265 @@
+
+<html lang="en">
+   {% load static %}
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Start Navbar Area -->
+   <div class="navbar-area"  style="background-color:#579c5d">
+     <!-- Menu For Mobile Device -->
+     <div class="mobile-nav" style="background-color:#579c5d">
+         <a href="{% url 'acceueil' %}" class="logo">
+             <img src="{% static '/imge/logo.png ' %}" alt="Logo">
+         </a>
+     </div>
+
+     <!-- Menu For Desktop Device -->
+     <div class="main-nav" style="background-color:#579c5d">
+         <div class="container">
+             <nav class="navbar navbar-expand-md navbar-light ">
+                 <a class="navbar-brand" href="{% url 'acceueil' %}">
+                    <img src="{% static '/imge/logo.png ' %}" alt="Logo">
+                 </a>
+
+                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                     <ul class="navbar-nav m-auto">
+                         <li class="nav-item">
+                             <a href="{% url 'acceueil' %}" class="nav-link active">
+                               Accueil
+
+                             </a>
+
+                         </li>
+
+
+                        <li class="nav-item">
+                           <a href="" class="nav-link">
+                               Ressources
+                               <i class='bx bx-chevron-down'></i>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li class="nav-item">
+                                   <a href="{% url 'ressource' %}" class="nav-link">
+                                      Ressources Documentaires
+                                   </a>
+                               </li>
+                           </ul>
+                       </li>
+
+
+                         <li class="nav-item">
+                           <a href="{% url 'post' %}" class="nav-link">  Blog</a>
+                           </li>
+
+
+
+                               <button class="btn btn-primary me-md-2-flex justify-content-md-end"><a href="{% url 'login'%}"><span style="color: white;">Espace Personnel</span> </a></button>
+
+
+                                   <ul>
+
+                                     {% if request.user.is_authenticated %}
+                                     <span style="color: white;"> {{ request.user.username }}</span>
+                                     <li><a href="{% url 'new_post' %}"><span style="color: white;">nouveau poste</span> </a></li>
+                                     <li><a href="{% url 'logout' %}"><span style="color: white;">deconnexion</span> </a></li>
+                                     {% endif%}
+
+                                   </ul>
+
+                     </ul>
+
+
+                 </div>
+             </nav>
+         </div>
+     </div>
+     <div class="side-nav-responsive">
+       <div class="container">
+           <div class="dot-menu">
+               <div>
+                   <div>
+
+
+
+
+                   </div>
+
+               </div>
+           </div>
+
+           <div class="container">
+               <div class="side-nav-inner">
+                   <div class="side-nav justify-content-center align-items-center">
+                       <div class="side-nav-item">
+
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+ </div>
+
+   <!-- Mirrored from preschool.dreamguystech.com/html-template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:39 GMT -->
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+      <title>PRECVADI - Login</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/bootstrap.min.css '%}">
+        <!-- Animate Min CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/animate.min.css '%}">
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" href="{% static 'as/fonts/flaticon.css '%}">
+        <!-- Boxicons CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/boxicons.min.css '%}">
+        <!-- Owl Carousel Min CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/owl.carousel.min.css '%}">
+        <link rel="stylesheet" href="{% static 'as/css/owl.theme.default.min.css '%}">
+        <!-- Nice Select Min CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/nice-select.min.css '%}">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/meanmenu.css '%}">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/style.css '%}">
+		<link rel="stylesheet" href="{% static 'as/css/style.scss '%}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/responsive.css '%}">
+        <!-- Theme Dark CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/theme-dark.css '%}">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'as/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'as/vendor/bootstrap/css/bootstrap.min.css '%}" rel="stylesheet">
+  <link href="{% static 'as/vendor/bootstrap-icons/bootstrap-icons.css '%}" rel="stylesheet">
+  <link href="{% static 'as/vendor/boxicons/css/boxicons.min.css '%}" rel="stylesheet">
+  <link href="{% static 'as/vendor/glightbox/css/glightbox.min.css '%}" rel="stylesheet">
+  <link href="{% static 'as/vendor/swiper/swiper-bundle.min.css '%}" rel="stylesheet">
+      <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+      <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+   </head>
+   <body>
+      <div class="main-wrapper login-body">
+         <div class="login-wrapper">
+            <div class="container">
+               <div class="loginbox">
+                  <div class="login-left" style="background-color:#579c5d">
+  <p class="account-subtitle" style="color: #fff">Commune de Thies</p>
+   <a href="{% url 'acceueil' %}" class="facebook"> <img class="img-fluid" src="{% static 'assets/img/logo-white.png' %}" alt="Logo"></a>
+    </div>
+<div class="login-right">
+<div class="login-right-wrap">
+<h1>Enregistrer</h1>
+
+<p class="account-subtitle">Accéder à notre tableau de bord</p>
+<form method="post">
+    {% csrf_token %}
+    {{ fs.as_p }}
+      <div class="form-group mb-0">
+      <button class="btn btn-primary btn-block" type="submit">Register</button>
+      </div>
+      </form>
+
+<div class="login-or">
+<span class="or-line"></span>
+<span class="span-or">or</span>
+</div>
+
+<div class="social-login">
+<span>Register with</span>
+<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a>
+</div>
+
+<div class="text-center dont-have">Vous avez déjà un compte <a href="{% url 'login' %}">S'identifier</a></div>
+</div>
+</div>
+</div>
+</div>
+
+<footer style="background-color: #000">
+    <div class="row">
+
+
+        <div class="col-xl-4 col-sm-6 col-12">
+           <div class="">
+            <a href="{% url 'home' %}" class="logo">
+                <img src=" {% static 'assets/img/logo_thies.png ' %}" alt="Logo">
+            </a>
+            <p style="color: #fff">Copyright © 2022<br> Precvadi ENSAIGT.</p>
+           </div>
+
+        </div>
+        <div class="col-xl-4 col-sm-6 col-12">
+            <div  class="">
+               <p  style="color: #fff">Nombre de visiteur: {{ online_now }}</p><br><br>
+               <h6><p  style="color: #fff">Mairie de la Commune de Thiès</p></h6>
+               <p  style="color: #fff">Adresse:115, Place de France –DVF</p>
+               <p  style="color: #fff">Boîte postale:BP 167</p>
+               <p  style="color: #fff">Fax:33 951 47 74</p>
+
+               <p  style="color: #fff"><i class="fa-regular fa-envelope"></i> &nbsp;&nbsp;comthies@sentoo.sn</p>
+
+               <p  style="color: #fff"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+221 33 951 12 91</p>
+               <p  style="color: #fff">Site web:http://www.mairie-thies.sn/</p>
+            </div>
+         </div>
+        <div class="col-xl-4 col-sm-6 col-12">
+           <div class="">
+            <div class="column">
+                <h3  style="color: #fff">Suivez-nous</h3>
+                <ul style="color: #fff">
+                  <li ><a href="#" style="color: #fff">Facebook</a></li>
+                  <li ><a href="#" style="color: #fff">Twitter</a></li>
+                  <li ><a href="#" style="color: #fff">Instagram</a></li>
+                </ul>
+              </div>
+        </div>
+     </div>
+
+
+
+  </div>
+
+</footer>
+      </div>
+
+      <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+      <script src="{% static 'assets/js/popper.min.js' %}"></script>
+      <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'assets/js/script.js' %}"></script>
+
+   </body>
+</html>
+
+<script src=" {% static 'script.js '%}"></script>
+<!-- Jquery Min JS -->
+<script src="{% static 'as/js/jquery.min.js '%}"></script>
+<!-- Bootstrap Min JS -->
+<script src="{% static 'as/js/bootstrap.bundle.min.js '%}"></script>
+<!-- Owl Carousel Min JS -->
+
+<!-- Nice Select Min JS -->
+<script src="{% static 'as/js/jquery.nice-select.min.js '%}"></script>
+<!-- Wow Min JS -->
+<script src="{% static 'as/js/wow.min.js '%}"></script>
+<!-- Meanmenu JS -->
+<script src="{% static 'as/js/meanmenu.js '%}"></script>
+<!-- Jquery Ui Min JS -->
+<script src="{% static 'as/js/jquery-ui.min.js '%}"></script>
+<!-- Ajaxchimp Min JS -->
+
+<!-- Mixitup Min JS -->
+<script src="{% static 'as/js/mixitup.min.js '%}"></script>
+<!-- Custom JS -->
+<script src="{% static 'as/js/custom.js '%}"></script>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'as/vendor/aos/aos.js'%}"></script>
+<script src="{% static 'as/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'as/vendor/glightbox/js/glightbox.min.js'%}"></script>
+<script src="{% static 'as/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+<script src="{% static 'as/vendor/swiper/swiper-bundle.min.js'%}"></script>
+<script src="{% static 'as/vendor/php-email-form/validate.js'%} "></script>

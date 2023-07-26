@@ -1,0 +1,41 @@
+{% extends 'layout/base.html' %} 
+{% load static %}
+ {% block title %}Commun
+thies{% endblock %} {% block body %}
+<div class="container mt-15">
+  <div class="text-center mb-4">
+    <h2>Update Profile</h2>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" class="btn custom-btn">Update Profile</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<!-- script src="{% static 'js/main.js' %}"></script-->
+
+<!-- diagramme -->
+<style>
+  /* Définir la couleur personnalisée pour le bouton */
+  .custom-btn {
+    background-color: #557029;
+    border-color: #557029;
+    color: #fff; /* Couleur du texte du bouton */
+  }
+</style>
+{% endblock %}

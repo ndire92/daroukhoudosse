@@ -1,0 +1,673 @@
+
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <!-- Mirrored from preschool.dreamguystech.com/html-template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:39 GMT -->
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+   <title>PRECVADI - Login</title>
+   <!-- Bootstrap CSS --> 
+   <link rel="stylesheet" href="{% static 'as/css/bootstrap.min.css '%}">
+   <!-- Animate Min CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/animate.min.css '%}">
+   <!-- Flaticon CSS -->
+   <link rel="stylesheet" href="{% static 'as/fonts/flaticon.css '%}">
+   <!-- Boxicons CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/boxicons.min.css '%}">
+   <!-- Owl Carousel Min CSS --> 
+   <link rel="stylesheet" href="{% static 'as/css/owl.carousel.min.css '%}">
+   <link rel="stylesheet" href="{% static 'as/css/owl.theme.default.min.css '%}">
+   <!-- Nice Select Min CSS --> 
+   <link rel="stylesheet" href="{% static 'as/css/nice-select.min.css '%}">
+   <!-- Meanmenu CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/meanmenu.css '%}">
+   <!-- Style CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/style.css '%}">
+   <link rel="stylesheet" href="{% static 'as/css/style.scss '%}">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/responsive.css '%}">
+   <!-- Theme Dark CSS -->
+   <link rel="stylesheet" href="{% static 'as/css/theme-dark.css '%}">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'as/vendor/aos/aos.css'%}" rel="stylesheet">
+<link href="{% static 'as/vendor/bootstrap/css/bootstrap.min.css '%}" rel="stylesheet">
+<link href="{% static 'as/vendor/bootstrap-icons/bootstrap-icons.css '%}" rel="stylesheet">
+<link href="{% static 'as/vendor/boxicons/css/boxicons.min.css '%}" rel="stylesheet">
+<link href="{% static 'as/vendor/glightbox/css/glightbox.min.css '%}" rel="stylesheet">
+<link href="{% static 'as/vendor/swiper/swiper-bundle.min.css '%}" rel="stylesheet">
+<link rel="shortcut icon" href="{% static 'assets/img/favicon.png'%}' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+<!--  datatable --><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+<!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">   
+
+<!-- Template Main CSS File -->
+<link href="{% static 'as/css/style.css '%}" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="{% static 'as/apexchart/apexcharts.min.js' %}"></script>
+<script src="{% static 'as/apexchart/chart-data.js' %}"></script>
+<script type="text/javascript">
+
+<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="{% static 'assets/plugins/apexchart/apexcharts.min.js' %}"></script>
+<script src="{% static 'assets/plugins/apexchart/chart-data.js' %}"></script>
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+<script src="{% static 'assets/plugins/datatables/datatables.min.js'%}"></script>
+<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+</head>
+
+<nav
+class="navbar navbar-expand-md navbar-light navbar-dark fixed-top"
+style="background-color: #557029;"
+>
+<div class="container-fluid">
+ <a class="navbar-brand" href="{% url 'acceueil' %}">
+   <img src="{% static 'imge/logo.jpg' %}" alt="Logo" />
+ </a>
+
+ <button
+   class="navbar-toggler"
+   type="button"
+   data-bs-toggle="collapse"
+   data-bs-target="#navbarSupportedContent"
+   aria-controls="navbarSupportedContent"
+   aria-expanded="false"
+   aria-label="Toggle navigation"
+ >
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <div
+   class="collapse navbar-collapse justify-content-center text-center"
+   id="navbarSupportedContent"
+ >
+   <ul class="navbar-nav">
+     <li class="nav-item">
+       <a
+         class="nav-link active"
+         aria-current="page"
+         href="{% url 'acceueil' %}"
+         ><i class="fa-solid fa-house"></i> Acceuil</a
+       >
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'commune' %}">Commune</a>
+     </li>
+
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'ressource' %}"
+         ><i class="fa-solid fa-book"></i> Ressources
+       </a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'post' %}"
+         ><i class="fa-solid fa-info"></i> Blog</a
+       >
+     </li>
+     {% if request.user.is_authenticated %}
+     <li class="nav-item">
+       <a href="{% url 'new_post' %}" class="nav-link">Nouveau Poste</a>
+     </li>
+     <li class="nav-item">
+       <a href="{% url 'logout' %}" class="nav-link">Déconnexion</a>
+     </li>
+     {% else %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <li class="nav-item" >
+       <a
+         class="btn btn-primary ms-auto justify-content-start"
+         href="{% url 'login' %}"
+         >Plateform</a
+       >
+     </li>
+     {% endif %}
+   </ul>
+ </div>
+
+ <ul class="nav user-menu">
+   {% if not request.user.userprofile %}
+   <li>
+     <a href="{% url 'create_profile' %}"></a>
+   </li>
+   {% endif %} {% if request.user.is_authenticated %}
+   <li class="nav-item dropdown has-arrow">
+     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+       <span class="user-img">
+         <img
+           src="{{ request.user.userprofile.profile_picture.url }}"
+           alt="User Image"
+           width="30"
+           height="30"
+         />
+       </span>
+     </a>
+     <div class="dropdown-menu">
+       <div class="user-header">
+         <div class="avatar avatar-sm">
+           <span class="user-img">
+             <img
+               src="{{ request.user.userprofile.profile_picture.url }}"
+               alt="User Image"
+               width="30"
+               height="30"
+             />
+           </span>
+         </div>
+         <div class="user-text">
+           <h6>
+             {{ request.user.userprofile.first_name }}
+             {{request.user.userprofile.last_name }}
+           </h6>
+         </div>
+       </div>
+       {% if not request.user.userprofile %}
+       <a class="dropdown-item" href="{% url 'create_profile' %}"
+         >Ajouter un Profil</a
+       >
+       {% else %}
+       <a class="dropdown-item" href="{% url 'profile_list' %}">Profil</a>
+       {% endif %}
+       <a class="dropdown-item" href="{% url 'logout' %}">Se déconnecter</a>
+     </div>
+   </li>
+   {% endif %}
+ </ul>
+</div>
+</nav>
+ 
+        <link rel="stylesheet" href="{% static 'csss/style.css'%}"/>
+      
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700;1,800&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+        />
+      </head>
+
+<title>{% block title%}Commun darou{%endblock%}</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <body>
+    <div class="accueil">
+      <img class="accueil-child" alt="" src="{% static '/public/frame-103@2x.png'%}" />
+
+      <img class="img-1560-1-icon" alt="" src="{% static '/public/img-1560-1@2x.png'%}" />
+
+      <div class="accueil-item"></div>
+      <div class="accueil-inner"></div>
+      <div class="line-div"></div>
+      <div class="accueil-child1"></div>
+      <div class="commune-de-darou-khoudoss-wrapper">
+        <div class="commune-de-darou-container">
+          <p class="commune-de-darou">
+            <span class="commune-de">COMMUNE DE </span>
+            <b>DAROU </b>
+          </p>
+          <p class="commune-de-darou">
+            <b>KHOUDOSS</b>
+          </p>
+        </div>
+      </div>
+      <div class="group-parent">
+        <img class="group-icon" alt="" src="{% static '/public/group.svg'%}" />
+
+        <div class="superficie-5-container">
+          <b class="superficie">Superficie :</b>
+          <span class="ha"> 5 035 ha</span>
+        </div>
+        <img class="group-icon1" alt="" src="{% static '/public/group1.svg'%}" />
+
+        <div class="dpartement-mbour-container">
+          <b class="superficie">Département :</b>
+          <span class="ha"> Mbour</span>
+        </div>
+      </div>
+      <div class="rectangle-div"></div>
+      <div class="frame-parent">
+        <div class="group-group">
+          <img class="group-icon2" alt="" src="{% static '/public/group2.svg'%}" />
+
+          <div class="commune-joal-container">
+            <p class="commune-de-daroue">
+              <b class="commune">
+                <span class="superficie">Commune :</span>
+              </b>
+              <b class="commune"> </b>
+              <span class="joal-fadiouth-ngazobil">darou-khoudoss</span>
+            </p>
+          </div>
+        </div>
+        <div class="group-container">
+          <img class="group-icon3" alt="" src="{% static '/public/group3.svg'%}" />
+
+          <div class="coordonnes-14-container">
+            <b class="superficie">Coordonnées :</b>
+            <span class="ha"> 14° 10′ nord, 16° 50′ Ouest</span>
+          </div>
+        </div>
+        <div class="frame-div">
+          <img class="group-icon4" alt="" src="{% static '/public/group4.svg'%}" />
+
+          <div class="densit-776-container">
+            <b class="superficie">Densité :</b>
+            <span class="ha"> 776 hab./km2 </span>
+          </div>
+        </div>
+      </div>
+      <b class="commune-de-darou-container1">
+        <p class="commune-de-darour">
+          Commune de Darou Khoudoss - Répartition de la population
+        </p>
+        <p class="commune-de-darour">- Urbaine - Masculin</p>
+      </b>
+      <b class="commune-de-darou-container2">
+        <p class="commune-de-darouf">
+          Commune de Darou Khodoss - Répartition de la population
+        </p>
+        <p class="commune-de-darouf">- Urbaine - Féminin</p>
+      </b>
+      <div class="accueil-child2">
+	      <div style="width: 99%; height: 100%; display: flex; justify-items: center; margin:5px;">
+				
+            <iframe title="ACCUEIL" width="2000" height="650" src="https://app.powerbi.com/view?r=eyJrIjoiZmJmMjkyYzEtYTk2Yi00OThhLWE1MjEtMTQyMGY3YThmNjNjIiwidCI6ImJmZTY0YzY0LWIwY2UtNDJiZC04MDlhLWE4ODlhMjJhZGQwOSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+	  
+	  </div>
+      <div class="la-commune-de-darou-khoudoss-parent">
+        <b class="la-commune-de-container">
+          <span>La commune de </span>
+          <span class="darou-khoudoss">DAROU KHOUDOSS</span>
+        </b>
+        <div class="la-commune-est">
+          La Commune est située dans l’arrondissement de Méouane, dans le
+          département de Tivaouane de la région de Thiès. Elle a une proximité
+          avec l’océan Atlantique à l’Ouest et est limitée par la Commune de Kab
+          Gaye et de Diokoul Diawrigne au Nord-Est, par la commune de Taïba
+          Ndiaye au Sud et par la commune de Méouane à l’Est. La scission de la
+          communauté rurale de Mboro avait donné naissance à la communauté
+          rurale de Mboro et communauté rurale de Darou Khoudoss. Darou Khoudoss
+          était érigée en communauté rurale par le décret n°2002-166 du 21
+          février 2002. La commune de Darou Khoudoss est née avec l’entrée en
+          vigueur de la loi sur la communalisation intégrale (loi 2013-10 du 28
+          décembre 2013 portant Code général des collectivités locales - CGCL).
+          Elle couvre une superficie de 520 km2.
+        </div>
+      </div>
+      <div class="lire-plus-wrapper">
+        <a href="{% url 'commune'  %}"><i class="lire-plus" style="color: aliceblue;">Lire Plus ...</i></a>
+      </div>
+      <div class="ellipse-parent">
+        <div class="frame-child"></div>
+        <div class="frame-item"></div>
+        <div class="frame-inner"></div>
+        <div class="ellipse-div"></div>
+      </div>
+      <div class="accueil-child3"></div>
+      
+      
+      <div class="position-sites-darou-plan-de-t-parent" id="groupContainer">
+        <img
+          class="position-sites-darou-plan-de-t"
+          alt=""
+          src="{% static '/public/position-sites-darou-plan-de-travail-1-copie-2@2x.png'%}"
+        />
+
+        <i class="hotel-de-ville">Hotel de Ville DAROU KHOUDOSS</i>
+      </div>
+      <div class="position-sites-darou-plan-de-t-group" id="groupContainer1">
+        <img
+          class="position-sites-darou-plan-de-t1"
+          alt=""
+          src="{% static '/public/position-sites-darou-plan-de-travail-1-copie-3@2x.png'%}"
+        />
+
+        <i class="parc-eolien-taiba-container">
+          <p class="commune-de-darou">Parc Eolien</p>
+          <p class="commune-de-darou">Taiba Ndiaye</p>
+        </i>
+      </div>
+      <div class="group-div">
+        <img class="vector-icon4" alt="" src="{% static '/public/vector4.svg'%}" />
+
+        <img class="vector-icon5" alt="" src="{% static '/public/vector5.svg'%}" />
+
+        <b class="b1">89</b>
+        <b class="b2">99</b>
+        <b class="superficie-alloue-a">Superficie Allouée a l’industrie</b>
+        <b class="superficie-exploit">Superficie Exploité </b>
+        <b class="superficie-concde">Superficie Concédée</b>
+        <b class="b3">567</b>
+        <img class="vector-icon6" alt="" src="{% static '/public/vector6.svg'%}" />
+
+        <img class="vector-icon7" alt="" src="{% static '/public/vector6.svg'%}" />
+
+        <img class="vector-icon8" alt="" src="{% static '/public/vector6.svg'%}" />
+
+        <div class="group-child"></div>
+        <b class="b4">999</b>
+        <div class="group-item"></div>
+        <b class="b5">345</b>
+        <img class="vector-icon9" alt="" src="{% static '/public/vector7.svg'%}" />
+
+        <img class="vector-icon10" alt="" src="{% static '/public/vector7.svg'%}" />
+
+        <div class="nombre-de-conflit">Nombre de Conflit 2020 / 2021</div>
+        <div class="nombre-dindustrie-2020">Nombre d’Industrie 2020 / 2021</div>
+        <div class="nombre-dindustrie-foncier">Nombre d’Industrie Foncier</div>
+        <img class="vector-icon11" alt="" src="{% static '/public/vector8.svg'%}" />
+
+        <img class="vector-icon12" alt="" src="{% static '/public/vector9.svg'%}" />
+
+        <div class="div">46</div>
+        <div class="div1">12</div>
+        <img class="vector-icon13" alt="" src="{% static '/public/vector10.svg'%}" />
+
+        <img class="vector-icon14" alt="" src="{% static '/public/vector10.svg'%}" />
+
+        <img class="vector-icon15" alt="" src="{% static '/public/vector10.svg'%}" />
+
+        <div class="div2">2020</div>
+        <div class="div3">2021</div>
+        <div class="div4">2020</div>
+        <img class="vector-icon16" alt="" src="{% static '/public/vector11.svg'%}" />
+
+        <img class="vector-icon17" alt="" src="{% static '/public/vector11.svg'%}" />
+
+        <img class="vector-icon18" alt="" src="{% static '/public/vector11.svg'%}" />
+
+        <div class="div5">2021</div>
+        <div class="div6">2020</div>
+        <div class="div7">2021</div>
+        <img class="vector-icon19" alt="" src="{% static '/public/vector12.svg'%}" />
+
+        <img class="vector-icon20" alt="" src="{% static '/public/vector13.svg'%}" />
+
+        <b class="b6">150</b>
+        <b class="b7">79</b>
+      </div>
+      <div class="line-parent">
+        <div class="frame-child1"></div>
+        <div class="frame-child2"></div>
+        <div class="vector-parent2">
+          <img class="vector-icon21" alt="" src="{% static '/public/vector14.svg'%}" />
+
+          <b class="accueil2">Accueil</b>
+        </div>
+        <div class="vector-parent3" id="frameContainer16">
+          <img class="vector-icon22" alt="" src="{% static '/public/vector15.svg'%}" />
+
+          <b class="commune3">Commune</b>
+        </div>
+        <div class="vector-parent4" id="frameContainer17">
+          <img class="vector-icon23" alt="" src="{% static '/public/vector16.svg'%}" />
+
+          <b class="ressources1">Ressources</b>
+        </div>
+        <div class="vector-parent5" id="frameContainer18">
+          <img class="vector-icon24" alt="" src="{% static '/public/vector17.svg'%}" />
+
+          <b class="blog1">Blog</b>
+        </div>
+        
+        <div class="vector-parent6">
+          <img class="vector-icon25" alt="" src="{% static '/public/vector18.svg'%}" />
+
+          <b class="densit-776-container">facebook</b>
+        </div>
+        <div class="vector-parent7">
+          <img class="vector-icon26" alt="" src="{% static '/public/vector19.svg'%}" />
+
+          <b class="densit-776-container">twitter</b>
+        </div>
+        <div class="vector-parent8">
+          <img class="vector-icon26" alt="" src="{% static '/public/vector20.svg'%}" />
+
+          <b class="densit-776-container">linkedin</b>
+        </div>
+        <div class="union-parent">
+          <img class="union-icon" alt="" src="{% static '/public/union.svg'%}" />
+
+          <div class="mairie-de-joal-fadiouth-container">
+            <p class="commune-de-darouf">
+              <i class="ha">Mairie de Darou khoudouss</i>
+            </p>
+            <p class="commune-de-darouf">
+              <i class="ha">Boîte postale:BP 167</i>
+            </p>
+            <p class="commune-de-darouf">
+              <b>&nbsp;</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>http://www.daroukhoudouss.sn</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>&nbsp;</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>+221 33 0000000</b>
+            </p>
+          </div>
+          <img class="vector-icon28" alt="" src="{% static '/public/vector21.svg'%}" />
+        </div>
+        <div class="copyright-2022precvadi-ensa-parent">
+          <b class="densit-776-container">
+            <span>Copyright © 2022Precvadi </span>
+            <span class="ensa-aphrc">ENSA-APHRC</span>
+          </b>
+          <b class="nombre-de-visiteur">Nombre de visiteur : {{ request.session.visits }}</b>
+        </div>
+      </div>
+     
+
+      <b class="secteur-de-la">SECTEUR DE LA PECHE ARTISANALE</b>
+      <img
+        class="diagramme-darou-femme-1"
+        alt=""
+        src="{% static '/public/diagramme-darou-femme-1@2x.png'%}"
+      />
+
+      <img
+        class="diagramme-darou-homme-2"
+        alt=""
+        src="{% static '/public/diagramme-darou-homme-2@2x.png'%}"
+      />
+    </div>
+
+    <div id="frameContainer" class="popup-overlay" style="display: none">
+      <div class="frame-top">
+        <div class="img-1558-parent">
+          <img class="img-1558-icon" alt="" src="{% static '/public/img-1558@2x.png'%}" />
+
+          <img class="frame-child22" alt="" src="{% static '/public/rectangle-31.svg'%}" />
+
+          <div class="superficie-39-container">
+            <p class="superficie-39-684-habitan">
+              <b class="superficie2">Superficie : </b>
+              <span class="habitants">39 684 habitants</span>
+            </p>
+            <p class="superficie-39-684-habitan">
+              <b>Département : </b>
+              <span class="tivaouane2"> Tivaouane</span>
+            </p>
+            <p class="superficie-39-684-habitan">
+              <b class="superficie2">Commune : </b>
+              <span class="habitants">Darou Khoudoss</span>
+            </p>
+            <p class="superficie-39-684-habitan">
+              <b>Coordonnées : 15.10442, -16.86585</b>
+            </p>
+            <p class="superficie-39-684-habitan">
+              <b>Densité : 76 habitants au km2</b>
+            </p>
+          </div>
+          <img class="frame-child23" alt="" src="{% static '/public/rectangle-32.svg'%}" />
+
+          <b class="mairie-darou-khoudoss" >Mairie Darou Khoudoss</b>
+        </div>
+      </div>
+    </div>
+
+    <div id="frameContaine" class="popup-overlay" style="display: none">
+      <div class="frame-root">
+        <div class="img-1572-parent">
+          <img class="img-1572-icon1" alt="" src="{% static '/public/img-15721@2x.png'%}" />
+
+          <img class="rectangle-icon" alt="" src="{% static '/public/rectangle-5.svg'%}" />
+
+          <div class="dpartement-tivaouane-container">
+            <p class="dpartement-tivaouane">
+              <b class="longitude" style="color: aliceblue;">Département : </b>
+              <a
+                class="tivaouane"
+                href="https://fr.wikipedia.org/wiki/D%C3%A9partement_de_Tivaouane"
+                target="_blank"
+              >
+                <span class="tivaouane1" style="color: aliceblue;">Tivaouane</span>
+              </a>
+            </p>
+            <p class="dpartement-tivaouane">
+              <b class="longitude" style="color: aliceblue;background-color: #a3bc1c;">Commune : </b>
+              <span class="longitude" style="color: aliceblue;background-color: #a3bc1c;">Darou Khoudoss</span>
+            </p>
+            <ul class="latitude-1511113-longitude">
+              <li class="latitude-1511113">
+                <b class="longitude" style="color: aliceblue;background-color: #a3bc1c;">latitude : 15.11113,</b>
+              </li>
+              <li>
+                <b class="longitude" style="color: aliceblue;background-color: #a3bc1c;">longitude : -16.84191</b>
+              </li>
+            </ul>
+          </div>
+          <img class="frame-child21" alt="" src="{% static '/public/rectangle-28.svg'%}" />
+
+          <i class="parc-eolien-taiba">Parc Eolien Taiba Ndiaye</i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var frameContainer10 = document.getElementById("frameContainer10");
+      if (frameContainer10) {
+        frameContainer10.addEventListener("click", function (e) {
+          window.location.href = "./commune.html";
+        });
+      }
+      
+      var frameContainer11 = document.getElementById("frameContainer11");
+      if (frameContainer11) {
+        frameContainer11.addEventListener("click", function (e) {
+          window.location.href = "./ressources.html";
+        });
+      }
+      
+      var frameContainer12 = document.getElementById("frameContainer12");
+      if (frameContainer12) {
+        frameContainer12.addEventListener("click", function (e) {
+          window.location.href = "./blog.html";
+        });
+      }
+      
+      var frameContainer14 = document.getElementById("frameContainer14");
+      if (frameContainer14) {
+        frameContainer14.addEventListener("click", function (e) {
+          window.location.href = "./loginpage.html";
+        });
+      }
+      
+      var groupContainer = document.getElementById("groupContainer");
+      if (groupContainer) {
+        groupContainer.addEventListener("click", function () {
+          var popup = document.getElementById("frameContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var groupContainer1 = document.getElementById("groupContainer1");
+      if (groupContainer1) {
+        groupContainer1.addEventListener("click", function () {
+          var popup = document.getElementById("frameContaine");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var frameContainer16 = document.getElementById("frameContainer16");
+      if (frameContainer16) {
+        frameContainer16.addEventListener("click", function (e) {
+          window.location.href = "{% url 'commune'  %}";
+        });
+      }
+      
+      var frameContainer17 = document.getElementById("frameContainer17");
+      if (frameContainer17) {
+        frameContainer17.addEventListener("click", function (e) {
+          window.location.href = "{% url 'ressource'  %}";
+        });
+      }
+      
+      var frameContainer18 = document.getElementById("frameContainer18");
+      if (frameContainer18) {
+        frameContainer18.addEventListener("click", function (e) {
+          window.location.href = "{% url 'post' %}";
+        });
+      }
+      </script>
+  </body>
+</html>

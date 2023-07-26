@@ -1,0 +1,137 @@
+
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-wrapper">
+ <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               <h5 class="form-title"><span>Gouvernance</span></h5>
+            </div>
+            {% include 'includes/messages.html' %}	
+            <div class="card-body">
+               <form method="POST" action="" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  
+                  <div class="text-right">
+                     <button type="submit" class="btn custom-btn">Ajouter</button>
+                   </div>
+                   
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+ <div class="content container-fluid">
+    <div class="page-header">
+       <div class="row align-items-center">
+          
+         
+       </div>
+    </div>
+    {% include 'includes/messages.html' %}
+    <div class="row">
+       <div class="col-sm-12">
+          <div class="card card-table">
+             <div class="card-body">
+                <div class="table-responsive">
+                   <table id="table_id" class="table table-hover table-center mb-0">
+                      <thead>
+                         <tr>
+                           <tr>
+                              
+                            <th>IdGouvFoncier</th>
+                           
+                              <th>codeCommune</th>
+                              <th>nomCommune</th>
+                              <th>LoiReglement</th>
+                              <th>OutilSecuriseFoncie</th>
+                              <th>ActFoncier</th>
+                              <th>DegreConnaissanc</th>
+                              <th>NivComprehension</th>
+                              <th>Resume</th>
+                              <th>AtelierBonInformat</th>
+                              <th>SecuritAjout</th>
+                              <th>NreConflitAnnComm</th>
+                              <th>NbreIndustri_FoncComm</th>
+                              <th>SuperfiAlloueIndustri </th>
+                              <th>NbreIndustri_FoncCommMoy</th>
+                              <th>SupTypeFoncier</th>
+                              <th>ActImplique</th>
+                              <th>CauseAvance</th>
+                              <th>SolutionPropose</th>
+                              <th>SolutionRetenu</th>
+                              <th>VerificatProcedur</th>
+                              <th>ControlPermanant</th>
+                              <th>ConfliFoncieEnregMois</th>
+                              <th>Date Début</th>
+                              <th>Date de Modification</th>
+                           <th class="text-right">Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                        {% for stud in dataObject %}
+                         <tr>
+                          
+                            <td>{{ stud.id }}</td>
+                              <td>{{stud.codeCommune}}</td>
+                           <td>{{stud.nomCommune}}</td>
+                           <td>{{stud.LoiReglement}}</td>
+                           <td>{{stud.OutilSecuriseFoncie}}</td>
+                           <td>{{stud.ActFoncier}}</td>
+                           <td>{{stud.DegreConnaissanc}}</td>
+                           <td>{{stud.NivComprehension}}</td>
+                           <td>{{stud.Resume}}</td>
+                           <td>{{stud.AtelierBonInformat}}</td>
+                           <td>{{stud.SecuritAjout}}</td>
+                           <td>{{stud.NreConflitAnnComm}}</td>
+                           <td>{{stud.NbreIndustri_FoncComm}}</td>
+                           <td>{{stud.SuperfiAlloueIndustri }}</td>
+                           <td>{{stud.NbreIndustri_FoncCommMoy}}</td>
+                           <td>{{stud.SupTypeFoncier}}</td>
+                           <td>{{stud.ActImplique}}</td>
+                           <td>{{stud.CauseAvance}}</td>
+                           <td>{{stud.SolutionPropose}}</td>
+                           <td>{{stud.SolutionRetenu}}</td>
+                           <td>{{stud.VerificatProcedur}}</td>
+                           <td>{{stud.ControlPermanant}}</td>
+                           <td>{{stud.ConfliFoncieEnregMois}}</td>
+                            <td>{{ stud.date_ent}}</td>
+                            <td>{{ stud.date_modification }}</td>
+
+                            <td class="text-right">
+                               <div class="actions">
+                                <a href="{% url 'foncier:up_Gouve' stud.id %}" class="btn btn-sm bg-success-light mr-2">
+                                  <i class="fas fa-pen"></i>
+                                  </a>
+                                  <a href="{% url 'foncier:de_Gouve' stud.id %}" class="btn btn-sm bg-danger-light">
+                                  <i class="fas fa-trash"></i>
+                                  </a>
+                               </div>
+                            </td>
+                         </tr>
+                         {% endfor %}
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    
+ </div>
+ <style>
+   /* Définir la couleur personnalisée pour le bouton */
+   .custom-btn {
+     background-color: #557029;
+     border-color: #557029;
+     color: #fff; /* Couleur du texte du bouton */
+   }
+ </style>
+
+ {% endblock %}

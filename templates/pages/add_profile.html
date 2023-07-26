@@ -1,0 +1,49 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+
+                <h2>Bienvenue&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;{{ user.first_name}} {{ user.last_name}} veuillez compléter votre profil</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% include 'includes/messages.html' %}	
+    <div class="col-sm-11">
+       <div class="form-group">
+          <label>description</label>
+          {{ form.description }}
+       </div>
+    </div>
+    <div class="col-sm-11">
+       <div class="form-group">
+          <label>téléphone</label>
+          {{ form.phone_number }}
+       </div>
+    </div>
+    <div class="col-sm-11">
+       <div class="form-group">
+          <label>Addresse</label>
+          {{ form.address }}
+       </div>
+    </div>
+    <div class="col-sm-11">
+       <div class="form-group">
+          <label>profile_picture</label>
+          {{ form.profile_picture }}
+       </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn custom-btn">Create Profile</button>
+    </div>
+  </form>
+
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<style>
+   /* Définir la couleur personnalisée pour le bouton */
+   .custom-btn {
+     background-color: #557029;
+     border-color: #557029;
+     color: #fff; /* Couleur du texte du bouton */
+   }
+ </style>
+{% endblock %}

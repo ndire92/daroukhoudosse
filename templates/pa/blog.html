@@ -1,0 +1,68 @@
+{% extends 'layout/base.html'%}
+
+{% load static %}
+<title>{% block title%}My block{%endblock%}</title>
+
+
+    <header>
+        {% include 'layout/partial/header.html' %}
+    </header>
+
+<div class="body container">
+    {% block body  %}
+
+<center><h2 style=" color: #557029; margin:6%;">Bienvenue {{ request.user.username }} sur votre page de blog !</h2></center>
+
+    <div class="row row-cols-md-3 row-cols-sm-6" style="margin:6%"; >
+
+        {% for post in posts %}
+            <div class="col">
+                <div class="custom-card card mb-3 shadow" style="display: flex; background-color: linear-gradient(180deg, #557029 86.46%, rgba(217, 217, 217, 0)); flex-direction: column; width: 350px;">
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="..."  >
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #557029">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.content|truncatechars:"300"|safe }}</p>
+                        <a href="{% url 'detail' post.id %}" class="btn btn- " style="background-color: #557029; color:#fff" >Savoir Plus</a>
+                        {% if post.user == request.user %}
+                            <a href="{% url 'update_post' post.id %}" class="btn btn-info">Update</a>
+                            <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer">
+                    <b> {{ post.date }}&nbsp;&nbsp;Par
+                        {{ post.user.username }}</b>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<nav>
+    <ul class="pagination justify-content-center">
+        {% if posts.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ posts.previous_page_number }}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+        <li class="page-item"><p class="page-link text-muted" >Page {{ posts.number }} of {{ posts.paginator.num_pa }}.</p></li>
+        {% if posts.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ posts.next_page_number }}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+
+        {% endif %}
+    </ul>
+</nav>
+
+
+
+
+    {% endblock %}
+

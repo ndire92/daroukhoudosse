@@ -1,0 +1,128 @@
+
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-wrapper">
+ <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               <h5 class="form-title"><span>Foncier</span></h5>
+            </div>
+            {% include 'includes/messages.html' %}	
+            <div class="card-body">
+               <form method="POST" action="" enctype="multipart/form-data">
+                  {% csrf_token %}
+              
+                  {{ form.as_p }}
+                  
+                  <div class="text-right">
+                     <button type="submit" class="btn custom-btn">Ajouter</button>
+                   </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+ <div class="content container-fluid">
+    <div class="page-header">
+       <div class="row align-items-center">
+          
+         
+       </div>
+    </div>
+    {% include 'includes/messages.html' %}
+    <div class="row">
+       <div class="col-sm-12">
+          <div class="card card-table">
+             <div class="card-body">
+                <div class="table-responsive">
+                   <table id="table_id" class="table table-hover table-center mb-0">
+                      <thead>
+                         <tr>
+                           <tr>
+                            <th>IdFoncier</th>
+                          
+                           <th>nomCommune </th>
+                           <th>codeCommune </th>
+                           <th>StatuFoncier </th>
+                           <th>TerrDeclas5D_Ans </th>
+                           <th>ActFonciePresen </th>
+                           <th>TxtFoncier </th>
+                           <th>OutilGesFoncier </th>
+                           <th>TypeConflit </th>
+                           <th>TypeUsage </th>
+                           <th>ExistCadrConcert </th>
+                           <th>EchelCadrConcert </th>
+                           <th>Entrepris_Indust_IncidFonc </th>
+                           <th>TypeExploit_Foncier </th>
+                           <th>SuperficConced  </th>
+                           <th>SuperficExploite </th>
+                           <th>Superfic_Deja_Exploite  </th>
+
+                            <th>Date Début</th>
+                            <th>Date de Modification</th>
+                           <th class="text-right">Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                        {% for stud in dataObject %}
+                         <tr>
+                          
+                            <td>{{ stud.id }}</td>
+                           
+                           <td>{{stud.nomCommune }}</td>
+                           <td>{{stud.codeCommune }}</td>
+                           <td>{{stud.StatuFoncier }}</td>
+                           <td>{{stud.TerrDeclas5D_Ans }}</td>
+                           <td>{{stud.ActFonciePresen }}</td>
+                           <td>{{stud.TxtFoncier }}</td>
+                           <td>{{stud.OutilGesFoncier }}</td>
+                           <td>{{stud.TypeConflit }}</td>
+                           <td>{{stud.TypeUsage }}</td>
+                           <td>{{stud.ExistCadrConcert }}</td>
+                           <td>{{stud.EchelCadrConcert }}</td>
+                           <td>{{stud.Entrepris_Indust_IncidFonc }}</td>
+                           <td>{{stud.TypeExploit_Foncier }}</td>
+                           <td>{{stud.SuperficConced  }}</td>
+                           <td>{{stud.SuperficExploite }}</td>
+                           <td>{{stud.Superfic_Deja_Exploite  }}</td>
+
+                             <td>{{ stud.date_en}}</td>
+                             <td>{{ stud.date_modification }}</td>
+                
+
+                            <td class="text-right">
+                               <div class="actions">
+                                <a href="{% url 'foncier:up_fon' stud.id %}" class="btn btn-sm bg-success-light mr-2">
+                                  <i class="fas fa-pen"></i>
+                                  </a>
+                                  <a href="{% url 'foncier:de_fon' stud.id %}" class="btn btn-sm bg-danger-light">
+                                  <i class="fas fa-trash"></i>
+                                  </a>
+                               </div>
+                            </td>
+                         </tr>
+                         {% endfor %}
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ 
+    
+ </div>
+ <style>
+   /* Définir la couleur personnalisée pour le bouton */
+   .custom-btn {
+     background-color: #557029;
+     border-color: #557029;
+     color: #fff; /* Couleur du texte du bouton */
+   }
+ </style>
+
+ {% endblock %}	

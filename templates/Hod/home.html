@@ -1,0 +1,135 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content  %}
+<style>
+
+	.row {
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+<div class="page-wrapper">
+    <div class="content container-fluid">
+       <div class="page-header">
+          <div class="row">
+             <div class="col-sm-12">
+                <h3 class="page-title">Bienvenue &nbsp;&nbsp;&nbsp;{{user.username}} &nbsp;&nbsp;&nbsp;sur&nbsp;&nbsp;&nbsp; votre &nbsp;&nbsp;&nbsp;page &nbsp;&nbsp;&nbsp;gestionnaire </h3>
+                <ul class="breadcrumb">
+                   <li class="breadcrumb-item active">Tableau de bord</li>
+                </ul>
+             </div>
+          </div>
+       </div>
+        
+       <div class="row display: flex;
+  justify-content: center;" > 
+      
+          <div>
+             <div class="card bg-three w-100">
+                <div class="card-body">
+                   <div class="db-widgets d-flex justify-content-between align-items-center">
+                     
+                      <div class="db-info">
+                        <h3>{{dt}}</h3>
+                         <h6>Foncier</h6>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div >
+             <div class="card bg-four w-100">
+                <div class="card-body">
+                   <div class="db-widgets d-flex justify-content-between align-items-center">
+                     
+                      <div class="db-info">
+                         <h3>{{datg}}</h3>
+                         <h6>Gouvernance</h6>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+        
+       </div>
+
+
+
+      <div class="row">
+          <div class="col-md-12 col-lg-6">
+             <div class="card card-chart">
+                <div class="card-header">
+                   <div class="row align-items-center">
+                      <div class="col-6">
+                         <h5 class="card-title"></h5>
+                      </div>
+                      <div class="col-6">
+                         <ul class="list-inline-group text-right mb-0 pl-0">
+                            <li class="list-inline-item">
+                               <div class="form-group mb-0 amount-spent-select">
+                                
+                               </div>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-body">
+                   <div id="all_details"></div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+             <div class="card card-chart">
+                <div class="card-header">
+                   <div class="row align-items-center">
+                      <div class="col-6">
+                         <h5 class="card-title"></h5>
+                      </div>
+                      <div class="col-6">
+                         <ul class="list-inline-group text-right mb-0 pl-0">
+                            <li class="list-inline-item">
+                               <div class="form-group mb-0 amount-spent-select">
+                                
+                               </div>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-body">
+                   <div id="stud_gender"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+
+ <div class="row">
+         
+          <div class="col-md-12 col-lg-6">
+             <div class="card card-chart">
+                <div class="card-header">
+                   <div class="row align-items-center">
+                      <div class="col-6">
+                         <h5 class="card-title"></h5>
+                      </div>
+                      <div class="col-6">
+                         <ul class="list-inline-group text-right mb-0 pl-0">
+                            <li class="list-inline-item">
+                               <div class="form-group mb-0 amount-spent-select">
+                                
+                               </div>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-body">
+                   <div id="course"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    {% include 'includes/chart.html'%}
+    {% endblock %}

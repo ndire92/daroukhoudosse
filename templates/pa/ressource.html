@@ -1,0 +1,172 @@
+{% extends 'layout/base.html'%}
+
+{% load static %}
+<title>{% block title%}ressource{%endblock%}</title>
+
+
+    <header>
+        {% include 'layout/partial/header.html' %}
+    </header>
+    {% block body  %}
+<body>
+
+    {% if request.user.is_authenticated %}
+  <div class="page-wrapper" style="margin-left:0px;">
+        <div class="content container-fluid">
+           <div class="page-header">
+              <div class="row align-items-center">
+                 <div class="col">
+                    <h3 class="page-title"></h3>
+                    <ul class="breadcrumb">
+
+                    </ul>
+                 </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-sm-12">
+                 <div class="card">
+                    <div class="card-body">
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                          <div class="row">
+                             <div class="col-12">
+                                <h5 class="form-title"><span>Ressource</span></h5>
+                             </div>
+
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group" >
+                       <label> Titre</label>
+                       {{ form.title }}
+                    </div>
+                 </div>
+                 <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                       <label>Mot Clés</label>
+                       {{ form.mot_cle}}
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                       <label>Date</label>
+                       <div>
+                        {{ form.date_en}}
+                       </div>
+                    </div>
+                 </div>
+
+
+
+
+
+                 <div class="col-12 col-sm-6">
+                    <div class="form-group" >
+                       <label>Action</label>
+                       {{ form.action}}
+                    </div>
+                 </div>
+                 <div class="text-right">
+                  <button type="submit" class="btn custom-btn">Ajouter</button>
+                </div>
+                          </div>
+                       </form>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     {% endif%}
+<div class="page-wrapper" style="margin-left:0px;">
+<div class="content container-fluid" style="margin-left: 0px;">
+
+<div class="page-header">
+<div class="row">
+<div class="col">
+<h3 class="page-title">Tableau des Ressources</h3>
+<ul class="breadcrumb">
+
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<div class="card">
+<div class="card-header">
+<h5 class="card-title mb-2">Default Datatable</h5>
+<p class="card-text">
+
+</p>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table class="datatable table table-stripped" style="border : 2px solid black;">
+<thead >
+<tr style="border : 2px solid black;">
+    <th style="border : 2px solid black; ">Numéro</th>
+<th style="border : 2px solid black;text-align: center;">Titre</th>
+<th style="border : 2px solid black;text-align: center;">Mots-clés</th>
+
+<th style="border : 2px solid black;text-align: center;">Date de publication</th>
+<th style="border : 2px solid black;text-align: center;">Voir le Rapport</th>
+{% if request.user.is_authenticated %}
+<th style="border : 2px solid black;text-align: center;">Action</th>
+{% endif %}
+</tr>
+</thead>
+<tbody>
+   {% for stud in dataObject %}
+<tr>
+<td style="border : 2px solid black;">{{ stud.id }}</td>
+<td style="border : 2px solid black;"> {{ stud.title|truncatechars:10 }}</td>
+<td style="border : 2px solid black;">{{ stud.mot_cle|truncatechars:50 }}</td>
+
+<td style="border : 2px solid black;">{{ stud.date_en}}</td>
+<td style="border : 2px solid black;"><a href="{{ stud.action.url}}" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a></td>
+{% if request.user.is_authenticated %}
+<td class="text-right" style="border : 2px solid black;">
+   <div class="actions">
+      <a href="{% url 'upda_res' stud.id %}" class="btn btn-sm bg-success-light mr-2">
+      <i class="fas fa-pen"></i>
+      </a>
+      <a href="{% url 'delete_ress' stud.id %}" class="btn btn-sm bg-danger-light">
+      <i class="fas fa-trash"></i>
+      </a>
+   </div>
+</td>
+{% endif %}
+</tr>
+<tr>
+   {% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+
+</body>
+
+<!-- Mirrored from preschool.dreamguystech.com/html-template/data-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:12:06 GMT -->
+</html>
+<style>
+   /* Définir la couleur personnalisée pour le bouton */
+   .custom-btn {
+     background-color: #557029;
+     border-color: #557029;
+     color: #fff; /* Couleur du texte du bouton */
+   }
+ </style>
+{% endblock %}

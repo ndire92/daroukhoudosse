@@ -1,0 +1,798 @@
+
+{% load static %}
+
+<title>Precvadi - daroukhoudoss</title>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS --> 
+        <link rel="stylesheet" href="{% static 'as/css/bootstrap.min.css '%}">
+        <!-- Animate Min CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/animate.min.css '%}">
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" href="{% static 'as/fonts/flaticon.css '%}">
+        <!-- Boxicons CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/boxicons.min.css '%}">
+        <!-- Owl Carousel Min CSS --> 
+        <link rel="stylesheet" href="{% static 'as/css/owl.carousel.min.css '%}">
+        <link rel="stylesheet" href="{% static 'as/css/owl.theme.default.min.css '%}">
+        <!-- Nice Select Min CSS --> 
+        <link rel="stylesheet" href="{% static 'as/css/nice-select.min.css '%}">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/meanmenu.css '%}">
+        <!-- Style CSS -->
+      
+		<link rel="stylesheet" href="{% static 'as/css/style.scss '%}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/responsive.css '%}">
+        <!-- Theme Dark CSS -->
+        <link rel="stylesheet" href="{% static 'as/css/theme-dark.css '%}">
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'as/vendor/aos/aos.css'%}" rel="stylesheet">
+        <link href="{% static 'as/vendor/bootstrap/css/bootstrap.min.css '%}" rel="stylesheet">
+        <link href="{% static 'as/vendor/bootstrap-icons/bootstrap-icons.css '%}" rel="stylesheet">
+        <link href="{% static 'as/vendor/boxicons/css/boxicons.min.css '%}" rel="stylesheet">
+        <link href="{% static 'as/vendor/glightbox/css/glightbox.min.css '%}" rel="stylesheet">
+        <link href="{% static 'as/vendor/swiper/swiper-bundle.min.css '%}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'assets/img/favicon.png'%}'%}' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+        <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+        <!--  datatable --><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+        <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">   
+
+        <!-- Template Main CSS File -->
+       
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="{% static 'as/apexchart/apexcharts.min.js' %}"></script>
+        <script src="{% static 'as/apexchart/chart-data.js' %}"></script>
+        <script type="text/javascript">
+            
+        <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/apexchart/apexcharts.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/apexchart/chart-data.js' %}"></script>
+        <script src="{% static 'assets/js/script.js' %}"></script>
+
+        <script src="{% static 'assets/plugins/datatables/datatables.min.js'%}"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+        <link rel="shortcut icon" href="{% static 'assets/img/favicon.png'%}'%}' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+        <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+        <!--datatable -->
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+        <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">   
+        <link rel="stylesheet" href="{% static 'csss/style.css'%}"/>
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+      />
+    </head>
+
+
+    <nav
+    class="navbar navbar-expand-md navbar-light navbar-dark fixed-top"
+    style="background-color: #557029;"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'acceueil' %}">
+        <img src="{% static 'imge/logo.jpg' %}" alt="Logo" />
+      </a>
+  
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center text-center"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="{% url 'acceueil' %}"
+              ><i class="fa-solid fa-house"></i> Acceuil</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'commune' %}">Commune</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'ressource' %}"
+              ><i class="fa-solid fa-book"></i> Ressources
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'post' %}"
+              ><i class="fa-solid fa-info"></i> Blog</a
+            >
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a href="{% url 'new_post' %}" class="nav-link">Nouveau Poste</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'logout' %}" class="nav-link">Déconnexion</a>
+          </li>
+          {% else %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+            <a
+              class="btn btn-primary ms-auto justify-content-start"
+              href="{% url 'login' %}"
+              >Plateform</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+  
+      <ul class="nav user-menu">
+        {% if not request.user.userprofile %}
+        <li>
+          <a href="{% url 'create_profile' %}"></a>
+        </li>
+        {% endif %} {% if request.user.is_authenticated %}
+        <li class="nav-item dropdown has-arrow">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <span class="user-img">
+              <img
+                src="{{ request.user.userprofile.profile_picture.url }}"
+                alt="User Image"
+                width="30"
+                height="30"
+              />
+            </span>
+          </a>
+          <div class="dropdown-menu">
+            <div class="user-header">
+              <div class="avatar avatar-sm">
+                <span class="user-img">
+                  <img
+                    src="{{ request.user.userprofile.profile_picture.url }}"
+                    alt="User Image"
+                    width="30"
+                    height="30"
+                  />
+                </span>
+              </div>
+              <div class="user-text">
+                <h6>
+                  {{ request.user.userprofile.first_name }}
+                  {{request.user.userprofile.last_name }}
+                </h6>
+              </div>
+            </div>
+            {% if not request.user.userprofile %}
+            <a class="dropdown-item" href="{% url 'create_profile' %}"
+              >Ajouter un Profil</a
+            >
+            {% else %}
+            <a class="dropdown-item" href="{% url 'profile_list' %}">Profil</a>
+            {% endif %}
+            <a class="dropdown-item" href="{% url 'logout' %}">Se déconnecter</a>
+          </div>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+  
+  <body>
+    <div class="commune4">
+      <div class="commune-child"></div>
+      <div class="commune-item"></div>
+      <div class="commune-inner"></div>
+      <div class="commune-de-darou-khoudoss-container">
+        <div class="commune-de-darou-container3" >
+          <p class="occupation-des-sols" style="font-size: 45px;">
+            <span class="commune-de1">COMMUNE DE </span>
+            <b>DAROU </b>
+          </p>
+          <p class="occupation-des-sols" style="font-size: 45px;">
+            <b>KHOUDOSS</b>
+          </p>
+        </div>
+      </div>
+      <div class="group-parent2">
+        <img class="group-icon6" alt="" src="{% static '/public/group6.svg'%}" />
+
+        <div class="superficie-5-container1">
+          <b class="superficie1">Superficie :</b>
+          <span class="ha1"> 5 035 ha</span>
+        </div>
+        <img class="group-icon7" alt="" src="{% static '/public/group7.svg'%}" />
+
+        <div class="dpartement-mbour-container1">
+          <b class="superficie1">Département :</b>
+          <span class="ha1"> Mbour</span>
+        </div>
+      </div>
+      <div class="lire-plus-container">
+        <i class="lire-plus1">Lire Plus ...</i>
+      </div>
+      <div class="ellipse-group">
+        <div class="frame-child3"></div>
+        <div class="frame-child4"></div>
+        <div class="frame-child5"></div>
+        <div class="frame-child6"></div>
+      </div>
+      
+      <img class="commune-child1" alt="" src="{% static '/public/vector-1.svg'%}" />
+
+      <img class="img-1560-icon" alt="" src="{% static '/public/img-1560@2x.png'%}" />
+
+      <i class="text">
+        <p class="occupation-des-sols">&nbsp;</p>
+      </i>
+      <div class="line-group">
+        <div class="frame-child7"></div>
+        <div class="frame-child8"></div>
+        <div class="vector-parent13" id="frameContainer10">
+          <img class="vector-icon33" alt="" src="{% static '/public/vector14.svg'%}" />
+
+          <b class="accueil4">Accueil</b>
+        </div>
+        <div class="vector-parent14">
+          <img class="vector-icon34" alt="" src="{% static '/public/vector15.svg'%}" />
+
+          <b class="commune6">Commune</b>
+        </div>
+        <div class="vector-parent15" id="frameContainer12">
+          <img class="vector-icon35" alt="" src="{% static '/public/vector16.svg'%}" />
+
+          <b class="ressources3">Ressources</b>
+        </div>
+        <div class="vector-parent16" id="frameContainer13">
+          <img class="vector-icon36" alt="" src="{% static '/public/vector17.svg'%}" />
+
+          <b class="blog3">Blog</b>
+        </div>
+        <div class="vector-parent17">
+          <img class="vector-icon37" alt="" src="{% static '/public/vector18.svg'%}" />
+
+          <b class="facebook1">facebook</b>
+        </div>
+        <div class="vector-parent18">
+          <img class="vector-icon38" alt="" src="{% static '/public/vector19.svg'%}" />
+
+          <b class="facebook1">twitter</b>
+        </div>
+        <div class="vector-parent19">
+          <img class="vector-icon38" alt="" src="{% static '/public/vector20.svg'%}" />
+
+          <b class="facebook1">linkedin</b>
+        </div>
+        <div class="union-group">
+          <img class="union-icon1" alt="" src="{% static '/public/union.svg'%}" />
+
+          <div class="mairie-de-joal-fadiouth-container">
+            <p class="commune-de-darouf">
+              <i class="ha">Mairie de Darou khoudouss</i>
+            </p>
+            <p class="commune-de-darouf">
+              <i class="ha">Boîte postale:BP 167</i>
+            </p>
+            <p class="commune-de-darouf">
+              <b>&nbsp;</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>http://www.daroukhoudouss.sn</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>&nbsp;</b>
+            </p>
+            <p class="commune-de-darouf">
+              <b>+221 33 0000000</b>
+            </p>
+          </div>
+          <img class="vector-icon40" alt="" src="{% static '/public/vector21.svg'%}" />
+        </div>
+        <div class="copyright-2022precvadi-ensa-group">
+          <b class="facebook1">
+            <span>Copyright © 2022Precvadi </span>
+            <span class="ensa-aphrc1">ENSA-APHRC</span>
+          </b>
+          <b class="nombre-de-visiteur1">Nombre de visiteur : {{ request.session.visits }}</b>
+        </div>
+      </div>
+
+
+      <i class="dmographie-et-population">Démographie et Population</i>
+      <i class="occupation-des-sols-container">
+        <p class="occupation-des-sols">
+          Occupation des sols dans la commune de
+        </p>
+        <p class="occupation-des-sols">Darou Khoudoss Zones dunaires</p>
+      </i>
+      <i class="occupation-des-sols-container1">
+        <p class="occupation-des-sols">Occupation des sols par les activités</p>
+        <p class="occupation-des-sols">de productionLes mines</p>
+      </i>
+      <i class="faade-maritime">Façade maritime</i>
+      <i class="zones-classees-aires"
+        >Zones classées, aires protégées et occupation du sol</i
+      >
+      <i class="la-commune-de-container1">
+        <p class="occupation-des-sols" style="font-size: 15px;">
+          La commune de Darou Khoudoss compte 68 villages et plus de 150
+          hameaux. La population est composée en majorité de wolofs qui
+          cohabitent avec les peulhs et les Sérères. Les population sont
+          majoritairement musulmanes avec la coexistence de deux principales
+          confréries Tidiane et Mouride. Les populations chrétienne se localise
+          surtout dans la village de Darou Khoudoss où l’on note la seule église
+          dans la commune.
+        </p>
+        <p class="occupation-des-sols">
+          La population de Darou Khoudoss est estimée à près de 90 000 en 2022
+          (ANSD, 2022). La densité moyenne est de 173 habitants au km 2 .
+        </p>
+      </i>
+      <i class="trois-systmes-dunaires-container">
+        <p class="occupation-des-sols" style="font-size: 15px;">
+          Trois systèmes dunaires sont présents.
+        </p>
+        <p class="occupation-des-sols">
+          - les dunes littorales vives ou encore dunes blanches ou dunes vives à
+          cause de leur mobilité.
+        </p>
+        <p class="occupation-des-sols">
+          Ce système prend tout le littoral de la Commune et a une largeur
+          d’environ un kilomètre.
+        </p>
+        <p class="occupation-des-sols">
+          - les dunes rouges continentales sur une largeur de 3 km ;
+        </p>
+        <p class="occupation-des-sols">
+          - les dunes jaunes ou dunes semi-fixées occupent l’arrière-plan des
+          dunes vives, et s’étendent sur
+        </p>
+        <p class="occupation-des-sols">
+          une largeur variant de 250 à 2 000 m du Nord au Sud.
+        </p>
+      </i>
+      <i class="une-importante-industrie"
+        >Une importante industrie minière se développe dans la commune de Darou
+        Khoudoss avec les entreprises les Industries Chimiques du Sénégal – ICS
+        qui exploite le phosphate, la GCO qui exploite le zircon, l’ilménite, le
+        rutile, le leucoxène et d’autres minéraux, le gisement de tourbe de
+        Cayar à Rao, la société Industries Africaines des Verres IAV-SA qui
+        exploite les sables extra-siliceux.</i
+      >
+      <div class="lagriculture-la-container">
+        <p class="occupation-des-sols">
+          <b>L’agriculture :</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >La superficie agricoles de la Commune de Darou Khoudoss est estimée
+            à 16 105 ha dont 5 930 ha réservés aux cultures maraichères et
+            fruitières et 10 175 ha pour les grandes cultures de saison des
+            pluies.</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">&nbsp;</i>
+        </p>
+        <p class="occupation-des-sols">
+          <b>L’élevage pastorale :</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >L’élevage constitue la deuxième activité économique après
+            l’agriculture. Il est très associé à l’agriculture. Ces deux
+            activités se complètent par les flux croisés de matières. Les
+            animaux de trait - équins et asins sont utilisés dans les travaux
+            agricole, de même que la matière organique d’origine animale pour
+            l’amendement des sols. Les résidus de récolte sont utilisés pour
+            l’alimentation des animaux.</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">&nbsp;</i>
+        </p>
+        <p class="occupation-des-sols">
+          <b>La pêche :</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >La pêche se développe sur la commune de Darou Khoudoss, de Sao à
+            Tioucougne Peul. Ces activités se déroulent sur la façade maritime
+            longue de 65 km et ouverte sur l’Atlantique. Les principaux centres
+            de pêche sont Fass Boye, Mboro Ndeundecat, Litt (Keur Alé Mar) et
+            Diogo sur mer.</i
+          >
+        </p>
+      </div>
+      <i class="contraintes-dans-la-container">
+        <p class="contraintes-dans-la">
+          Contraintes dans la gestion et la valorisation foncière,
+        </p>
+        <p class="contraintes-dans-la">
+          et à la gestion des ressources naturelles
+        </p>
+        <p class="occupation-des-sols">
+          Plusieurs contraintes sont notées sur l’occupation et de l’affectation
+          des sols et sur la gestion des ressources naturelles.
+        </p>
+        <p class="occupation-des-sols">&nbsp;</p>
+        <p class="contraintes-dans-la">
+          Contraintes dans l’occupation et l’affectation des sols
+        </p>
+        <p class="occupation-des-sols">
+          Les contraintes principales dans l’occupation et l’affectation des
+          sols sont :
+        </p>
+        <p class="occupation-des-sols">
+          - le statut et l’étendue du périmètre de restauration Niayes.
+        </p>
+        <p class="occupation-des-sols">
+          - le défaut de matérialisation des limites (absence de cadastre rural)
+          ;
+        </p>
+        <p class="occupation-des-sols">
+          - les acquisitions foncières à grande échelle des compagnies minières
+          et de production énergétique (ICS, GCO, Africa Energy) ;
+        </p>
+        <p class="occupation-des-sols">
+          - le défaut de réhabilitation des sites miniers ;
+        </p>
+        <p class="occupation-des-sols">
+          - la pollution atmosphérique et rejet de gaz des ICS (impacts
+          sanitaires sur les cultures) ;
+        </p>
+        <p class="occupation-des-sols">
+          - le rejet d’eaux usées industrielles non épurées par les ICS dans le
+          domaine public maritime(Khondio) ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’insécurité́ foncière des producteurs maraichers dans les bassins de
+          schlamm des ICS et dans le périmètre de restauration des Niayes ;- les
+          conflits entre les acteurs usagers du sol ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’absence de système innovant d’enregistrement et d’archivage des
+          documents fonciers ;
+        </p>
+        <p class="occupation-des-sols">
+          - la méconnaissance des textes relatifs au foncier et à la gestion des
+          ressources naturelles (GRN) par les populations ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’ignorance par les populations des limites et règles de gestion du
+          périmètre de restauration des Niayes (PRN) ;-la faiblesse de l’accès
+          des femmes aux terres agricoles ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’absence de délimitation et de matérialisation des parcours et
+          pistes de bétail ;
+        </p>
+        <p class="occupation-des-sols">
+          - la réduction des terres consacrées à l’agriculture et à l’élevage du
+          fait des concessions minières et de l’urbanisation ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’interpénétration des activités minières, agricoles, pastorales et
+          halieutiques.
+        </p>
+      </i>
+      <i class="contraintes-dans-la-container1">
+        <p class="contraintes-dans-la">
+          Contraintes dans la gestion des ressources naturelles
+        </p>
+        <p class="occupation-des-sols">
+          Les principales contraintes de la Commune de Daru Khoudoss sont :
+        </p>
+        <p class="occupation-des-sols">
+          - l’urbanisation rapide avec comme conséquence une pression foncière
+          très tendue; l'insuffisance et parfois la disparition des zones de
+          pâturage ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’instabilité des dunes blanches et jaunes ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’ensablement des cuvettes maraîchères et des bas-fonds
+        </p>
+        <p class="occupation-des-sols">
+          ;- la surexploitation des nappes aquifères ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’affaissement progressif de la nappe suite à la régression
+          pluviométrique ;
+        </p>
+        <p class="occupation-des-sols">
+          - l’appauvrissement, la salinisation et l’acidification des sols ;
+        </p>
+        <p class="occupation-des-sols">
+          - la salinisation de la nappe phréatique ;- les pertes de terres en
+          raison de l’exploitation minière;
+        </p>
+        <p class="occupation-des-sols">
+          - le déboisement du fait des travaux des industries minières;
+        </p>
+        <p class="occupation-des-sols">
+          -l’absence de réhabilitation des sites d’exploitation des mines ;
+        </p>
+        <p class="occupation-des-sols">
+          - la dégradation des paysages suite à l’exploitation du minerai de
+          phosphates et des sables minéraliers;
+        </p>
+        <p class="occupation-des-sols">
+          - les rejets de produits acides par les ICS sur le site de Khondio
+          dans la commune de Darou Khoudoss ;
+        </p>
+        <p class="occupation-des-sols">
+          - la destruction des habitats fauniques ;
+        </p>
+        <p class="occupation-des-sols">
+          -l’utilisation abusive de pesticides et d’engrais chimiques ;
+        </p>
+        <p class="occupation-des-sols">
+          - la contamination de la chaîne alimentaire par les déchets
+          agro-industriels ;
+        </p>
+        <p class="occupation-des-sols">
+          - la disparition des points d’eau permanents et le tarissement continu
+          des points d’eau temporaires ;
+        </p>
+        <p class="occupation-des-sols">
+          - la diminution du potentiel de la pêche;
+        </p>
+        <p class="occupation-des-sols">
+          - les menaces sur le domaine public maritime, sur la bande de filaos,
+          les poumons verts et les espaces agricoles.
+        </p>
+      </i>
+      <div class="zones-de-vocation-container">
+        <p class="occupation-des-sols">
+          <b>Zones de vocation</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >La commune de Darou Khoudoss est structurée en cinq (05) zones de
+            vocation :</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles"
+            >- La zone agrosylvopastorale à priorité agriculture (ZAPA) ;- Les
+            zones de conservation (ZOC) ;</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">- La zone littorale (ZL);</i>
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles"
+            >-La zone industrialo minière (ZIM) ;</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">-Les zones d’habitation (ZA).</i>
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles"
+            >Ces différentes contraintes énumérées rendent pertinent le projet
+            de « Renforcement de Chaînes de Valeurs
+          </i>
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles"
+            >de données Infranationales en Afrique Subsaharienne (PRECVADI) »
+            qui axe ses interventions sur le foncier et les domaines
+            connexes.</i
+          >
+        </p>
+      </div>
+      <i class="darou-khoudoss-abrite"
+        >Darou Khoudoss abrite une façade maritime sur 65 km, faisant partie du
+        domaine public maritime. La pêche est pratiquée dans ce domaine. Les
+        villages pêcheurs de Ndeundecat, Fass Boye, Litte, Diogo sur Mer sont
+        implantés dans ce domaine.</i
+      >
+      <i class="dans-la-commune"
+        >Dans la commune, les zones classées et les aires protégées sont
+        représentées par le périmètre de restauration des Niayes (bande de
+        filao) et par la réserve naturelle communautaire (RNC) de Darou
+        Khoudoss. La RNC a une superficie de1500 ha et se trouve entre les
+        Balsand, Diambalo, Sao Mekhé I, Weuta, Ndénout, Sao Mékhé II,
+        Mourdjiguène, Thjssé, Ndiop Sao, Sao Mékhé Peul (Keur Demba Ly), Sao.</i
+      >
+      <div class="lexploitation-forestire-lex-container">
+        <p class="occupation-des-sols">
+          <b>L’exploitation forestière</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >L’exploitation forestière aux plantations de filao de la Grande
+            Côte Nord du Sénégal, dans le cadre d’un plan d’aménagement en
+            concertation étroite avec les groupements forestiers élaboré́ en 2005
+            par le service forestier avec l’appui de la coopération
+            canadienne.</i
+          >
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">&nbsp;</i>
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;margin-bottom: 5px;">
+          <i class="la-superficie-agricoles"
+            >La Direction des Eaux, Forêts, Chasses et Conservation des Sols
+            (DEFCCS) à travers la Cellule de mise en œuvre du plan d’aménagement
+            de la Bande de filao (CMOPABF), met en œuvre ce Plan d’aménagement.
+          </i>
+        </p>
+        <p class="occupation-des-sols">
+          <i class="la-superficie-agricoles">&nbsp;</i>
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <b>Potentialités et contraintes</b>
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;margin-bottom: 5px;">
+          <b>Potentialités de la commune</b>
+        </p>
+        <p class="la-superficie-agricoles-de-la">
+          <i class="la-superficie-agricoles"
+            >La commune de Darou Khoudoss dispose de potentialités importantes à
+            travers les écosystèmes présents. On note :</i
+          >
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles"
+            >- des dépressions humides ou inter dunaires et très fertiles,
+            favorables aux cultures horticoles (maraichères et arboricoles);</i
+          >
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles"
+            >- une nappe peu profonde, apte à assurer des apports d’eau pour
+            l’irrigation des cultures ;</i
+          >
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles"
+            >- des sols relativement profonds et légers, riches en matières
+            organiques dans les dépressions</i
+          >
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles">
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles"
+            > </i
+          >
+        </p>
+        <p class="occupation-des-sols" style="font-size: 17px;">
+          <i class="la-superficie-agricoles"
+            ></i
+          >
+        </p>
+      </div>
+      <img class="img-1568-1-icon" alt="" src="{% static '/public/img-1568-1@2x.png'%}" />
+
+      <div class="commune-child2"></div>
+      <img class="commune-child3" alt="" src="{% static '/public/vector-2.svg'%}" />
+
+      <img class="img-1568-icon" alt="" src="{% static '/public/img-1568@2x.png'%}" />
+
+      <img class="commune-child4" alt="" src="{% static '/public/vector-2.svg'%}" />
+
+      <img class="img-1565-icon" alt="" src="{% static '/public/img-1565@2x.png'%}" />
+
+      <img class="commune-child5" alt="" src="{% static '/public/vector-2.svg'%}" />
+
+      <img class="img-1572-icon" alt="" src="{% static '/public/img-1572@2x.png'%}" />
+
+      <img class="commune-child6" alt="" src="{% static '/public/vector-1.svg'%}" />
+
+      <img class="img-1576-icon" alt="" src="{% static '/public/img-1576@2x.png'%}" />
+
+      <img class="commune-child7" alt="" src="{% static '/public/vector-1.svg'%}" />
+
+      <img class="img-1563-icon" alt="" src="{% static '/public/img-1563@2x.png'%}" />
+
+      <img class="commune-child8" alt="" src="{% static '/public/vector-2.svg'%}" />
+
+      <img
+        class="paysage-a-lest-de-darou-khou-icon"
+        alt=""
+        src="{% static '/public/paysage-a-lest-de-darou-khoudoss-1@2x.png'%}"
+      />
+    </div>
+
+    <script>
+      var frameContainer4 = document.getElementById("frameContainer4");
+      if (frameContainer4) {
+        frameContainer4.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var frameContainer6 = document.getElementById("frameContainer6");
+      if (frameContainer6) {
+        frameContainer6.addEventListener("click", function (e) {
+          window.location.href = "{% url 'ressource'  %}";
+        });
+      }
+      
+      var frameContainer7 = document.getElementById("frameContainer7");
+      if (frameContainer7) {
+        frameContainer7.addEventListener("click", function (e) {
+          window.location.href = "{% url 'post' %}";
+        });
+      }
+      
+     
+      
+      var frameContainer10 = document.getElementById("frameContainer10");
+      if (frameContainer10) {
+        frameContainer10.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var frameContainer12 = document.getElementById("frameContainer12");
+      if (frameContainer12) {
+        frameContainer12.addEventListener("click", function (e) {
+          window.location.href = "{% url 'ressource'  %}";
+        });
+      }
+      
+      var frameContainer13 = document.getElementById("frameContainer13");
+      if (frameContainer13) {
+        frameContainer13.addEventListener("click", function (e) {
+          window.location.href = "{% url 'post' %}";
+        });
+      }
+      
+      var calque1 = document.getElementById("calque1");
+      if (calque1) {
+        calque1.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      </script>
+  </body>
+</html>

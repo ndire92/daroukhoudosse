@@ -1,0 +1,71 @@
+{% extends 'layout/base.html' %} {% load static %} {% block title %}Commun
+thies{% endblock %} {% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h3 class="text-center">Profile Detail</h3>
+      <div class="card">
+        <div class="card-body">
+          {% if user_profile.profile_picture %}
+          <p class="fs-5"><strong></strong></p>
+          <img
+            src="{{ user_profile.profile_picture.url }}"
+            alt="Profile Picture"
+            width="70"
+            height="70"
+            class="img-fluid"
+          />
+          {% endif %}
+          <p class="fs-5">
+            <strong>User:</strong> {{ user_profile.user.username }}
+          </p>
+          <p class="fs-5">
+            <strong>First Name:</strong> {{ user_profile.first_name }}
+          </p>
+          <p class="fs-5">
+            <strong>Last Name:</strong> {{ user_profile.last_name }}
+          </p>
+          <p class="fs-5"><strong>Email:</strong> {{ user_profile.email }}</p>
+          <p class="fs-5">
+            <strong>Fonction:</strong> {{ user_profile.description }}
+          </p>
+          <p class="fs-5">
+            <strong>Tel:</strong> {{ user_profile.phone_number }}
+          </p>
+          <p class="fs-5">
+            <strong>Adresse:</strong> {{ user_profile.address }}
+          </p>
+        </div>
+      </div>
+      <a
+        href="{% url 'profile_list' %}"
+        class="btn custom-btn"
+        >Back to Profile List</a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<!-- script src="{% static 'js/main.js' %}"></script-->
+
+<!-- diagramme -->
+<style>
+  /* Définir la couleur personnalisée pour le bouton */
+  .custom-btn {
+    background-color: #557029;
+    border-color: #557029;
+    color: #fff; /* Couleur du texte du bouton */
+  }
+</style>
+{% endblock %}

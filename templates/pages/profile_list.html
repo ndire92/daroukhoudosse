@@ -1,0 +1,91 @@
+{% extends 'layout/base.html' %} {% load static %} {% block title %}Commun
+darou{% endblock %} {% block body %}
+<div class="container mt-15">
+  <div class="table-responsive">
+    <table class="table table-hover table-center mb-0 datatable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Profile Picture</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Description</th>
+          <th>Adresse</th>
+          <th>Téléphone</th>
+          <th class="text-right">Action</th>
+        </tr>
+      </thead>
+      <!-- Corps du tableau avec les données -->
+      <tbody>
+        {% for profile in profiles %}
+        <tr>
+          <td>{{ profile.id }}</td>
+          <td>
+            <img
+              src="{{ profile.profile_picture.url }}"
+              alt=""
+              width="50"
+              height="50"
+            />
+          </td>
+          <td>{{ profile.user.username }}</td>
+          <td>{{ profile.email }}</td>
+          <td>{{ profile.first_name }}</td>
+          <td>{{ profile.last_name }}</td>
+          <td>{{ profile.description }}</td>
+          <td>{{ profile.address }}</td>
+          <td>{{ profile.phone_number }}</td>
+          <td class="text-right">
+            <div class="actions">
+              {% if request.user == profile.user %}
+              <a
+                href="{% url 'profile_detail' %}"
+                class="btn btn-primary btn-sm mr-2"
+                >View</a
+              >
+              <a
+                href="{% url 'update_profile' %}"
+                class="btn btn-success btn-sm mr-2"
+              >
+                <i class="fas fa-pen"></i> Modifier
+              </a>
+              <form
+                action="{% url 'delete_profile' %}"
+                method="POST"
+                style="display: inline"
+              >
+                {% csrf_token %}
+                <input
+                  type="submit"
+                  value="Delete"
+                  class="btn btn-danger btn-sm"
+                />
+              </form>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<!-- script src="{% static 'js/main.js' %}"></script-->
+
+<!-- diagramme -->
+
+{% endblock %}

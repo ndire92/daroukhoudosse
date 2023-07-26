@@ -1,0 +1,51 @@
+{% load static %}
+<footer style="background-color: #000;">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-4 col-sm-6 col-12 footer-column">
+         <div class="footer-links">
+           <ul style="font-size: 30px; color: #fff;">
+             <li><img class="vector-icon21" alt="" src="{% static '/public/vector14.svg'%}" />&nbsp;&nbsp;<a href="{% url 'acceueil' %}" style="color:#fff;">Accueil</a></li>
+             <li><img class="vector-icon22" alt="" src="{% static '/public/vector15.svg'%}" />&nbsp;&nbsp;<a href="{% url 'commune' %}" style="color:#fff;">Commune</a></li>
+             <li><img class="vector-icon23" alt="" src="{% static '/public/vector16.svg'%}" />&nbsp;&nbsp;<a href="{% url 'ressource' %}" style="color:#fff;">Ressources</a></li>
+             <li><img class="vector-icon24" alt="" src="{% static '/public/vector17.svg'%}" />&nbsp;&nbsp;<a href="{% url 'post' %}" style="color:#fff;">Blog</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="col-xl-4 col-sm-6 col-12 footer-column">
+         <div class="column" style="margin-right: 30px;">
+           <p style="color:#a3bc1c; font-size: 20px;">Nombre total de visites : {{ request.session.visits }}</p>
+           <h6><p style="color: #fff; font-size: 20px;">Mairie de Darou khoudoss</p></h6>
+           <p style="color: #fff; font-size: 20px;"><i class="fa-regular fa-envelope"></i> &nbsp;&nbsp;darou@sentoo.sn</p>
+           <p style="color: #fff; font-size: 20px;"> Boîte postale:BP 167</p>
+          
+           <p style="color: #fff; font-size: 20px;"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+221 33 0000000</p>
+           <p style="color: #fff; font-size: 20px;">http://www.daroukhoudouss.sn</p>
+         </div>
+       </div>
+       <div class="col-xl-4 col-sm-6 col-12 footer-column">
+         <div class="column" style="margin-left: 50px;">
+           <h3 style="color: #fff;">Suivez-nous</h3>
+           <ul style="color: #fff;">
+             <li><img class="vector-icon25" alt="" src="{% static '/public/vector18.svg'%}" />&nbsp;&nbsp;&nbsp;<a href="#" style="color: #fff;font-size: 20px;">Facebook</a></li><br>
+             <li><img class="vector-icon26" alt="" src="{% static '/public/vector19.svg'%}" />&nbsp;&nbsp;&nbsp;<a href="#" style="color: #fff;font-size: 20px;">Twitter</a></li><br>
+             <li><img class="vector-icon26" alt="" src="{% static '/public/vector20.svg'%}" />&nbsp;&nbsp;&nbsp;<a href="#" style="color: #fff;font-size: 20px;">LinkedIn</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <p style="color: #fff; font-size: 20px;">Copyright © 2023 Precvadi <span style="color:#a3bc1c; font-size: 20px;">ENSA-APHRC</span></p>
+           
+   </div>
+ </footer>
+ <style>
+   .footer-column {
+     border-right: 2px solid #fff; /* Couleur de la bordure entre les colonnes */
+     padding-right: 15px; /* Espace entre la bordure et le contenu de chaque colonne */
+   }
+ 
+   /* Pour la dernière colonne, supprimez la bordure de droite pour éviter un double trait */
+   .footer-column:last-child {
+     border-right: none;
+   }
+ </style>
